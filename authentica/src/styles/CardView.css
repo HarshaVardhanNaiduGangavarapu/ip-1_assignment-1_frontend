@@ -1,0 +1,31 @@
+.form{
+height: 50%;
+width: 30%;
+background-color: #282c34;
+opacity: 1;
+/* border-radius: 5px; */
+border: 1px;
+border-color: white;
+}
+
+.header{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.contents{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.input-container{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.input{
+    box-sizing: border-box;
+    background-color: #282c34;
+}
