@@ -1,5 +1,9 @@
 .MainApp {
+    background-color: #282c34;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   /* .App-logo {
@@ -18,7 +22,6 @@
   }
   
   .App-header {
-    background-color: #282c34;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -39,6 +42,15 @@
     color: #61dafb;
   }
   
+  .card {
+    background-color: #363b45;
+    width: 25%;
+    height: 200%;
+    border-radius: 5%;
+    margin-right: 25%;
+    display: block;
+    margin-right: 25%;
+  }
   /* @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);

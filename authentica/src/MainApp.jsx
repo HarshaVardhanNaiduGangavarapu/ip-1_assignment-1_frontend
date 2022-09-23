@@ -1,8 +1,8 @@
 import logo from './assets/icons8-connect-develop-48.svg'
 import friends from './assets/animation_500_l859okyg.gif';
 import CardView from './components/CardView';
+import { Link } from 'react-router';
 import './MainApp.css';
-
 
 function App() {
   return (
@@ -14,6 +14,9 @@ function App() {
            </div>
         <img src={friends} alt="loading..." />
       </header>
+      <div className='card'>
+      <CardView></CardView>
+      </div>
     </div>
   );
 }
