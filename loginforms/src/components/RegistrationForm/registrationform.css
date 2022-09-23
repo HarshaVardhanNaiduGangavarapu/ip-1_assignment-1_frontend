@@ -1,0 +1,15 @@
+.loginText {
+    color: #006bff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-card{
+    min-height: 45vh;
+    left: 700px;
+}
+
+.successMessage {
+    color: green;
+    font-weight: bold;
+}
