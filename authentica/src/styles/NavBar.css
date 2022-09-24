@@ -1,0 +1,21 @@
+.navigation{
+    background-color: #009B77;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    color: white;
+    margin-left: 1%;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.button-container{
+    width: fit-content;
+    margin-right: 1%;
+}
