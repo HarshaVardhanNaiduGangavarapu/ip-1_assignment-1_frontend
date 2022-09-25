@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import '../styles/LoginCardView.css';
 import { MdEmail } from "react-icons/md";
 import { MdPassword } from "react-icons/md";
@@ -6,6 +7,8 @@ import { FaUserAlt } from 'react-icons/fa';
 import google from '../assets/icons8-google-48.svg'
 
 function CardView() {
+  const navigate = useNavigate();
+
   return (
     <div className='form'>
     <form className='contents'>
@@ -20,7 +23,7 @@ function CardView() {
         <input className='input' type='password' placeholder='Password' name='pass' required />
       </div>
       <div className='button-container'>
-        <input className='button' type='submit' />
+        <input className='button' onClick={() => navigate("/user", { replace: true })} type='submit' />
       </div>
       <p className='login'>Or login with</p>
       <img src={google} alt="loading..." />
