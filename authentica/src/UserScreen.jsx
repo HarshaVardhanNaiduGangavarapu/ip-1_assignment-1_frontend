@@ -3,6 +3,7 @@ import friends from './assets/animation_500_l859okyg.gif';
 import CardView from './components/CardView';
 import './UserScreen.css';
 import NavBar from './components/NavBar';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -21,14 +22,10 @@ function App() {
     <div className="MainApp">
     <header className="App-header">
         <NavBar></NavBar>
-      {/* <div className='App-head'>
-        <h2 className="headone">Welcome User</h2> 
-      </div>
-      <img src={friends} alt="loading..." /> */}
+    <div className='container-2'>
+    <Profile></Profile>
+    </div>
     </header>
-    {/* <div className='card'>
-    <CardView></CardView>
-    </div> */}
   </div>
   );
 }
