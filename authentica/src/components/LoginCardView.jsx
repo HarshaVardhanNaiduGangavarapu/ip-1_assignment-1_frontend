@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/CardView.css';
+import '../styles/LoginCardView.css';
 import { MdEmail } from "react-icons/md";
 import { MdPassword } from "react-icons/md";
 import { FaUserAlt } from 'react-icons/fa';

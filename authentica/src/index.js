@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import MainApp from './MainApp';
+import UserScreen from './UserScreen';
 import reportWebVitals from './reportWebVitals';
+import UpdateScreen from './UpdateScreen';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MainApp />
+    {/* <UserScreen></UserScreen> */}
+    {/* <MainApp></MainApp> */}
+    <UpdateScreen></UpdateScreen>
   </React.StrictMode>
 );
 

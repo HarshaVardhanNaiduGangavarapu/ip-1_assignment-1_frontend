@@ -1,7 +1,6 @@
 import logo from './assets/icons8-connect-develop-48.svg'
 import friends from './assets/animation_500_l859okyg.gif';
-import CardView from './components/CardView';
-import { Link } from 'react-router';
+import CardView from './components/LoginCardView';
 import './MainApp.css';
 
 function App() {

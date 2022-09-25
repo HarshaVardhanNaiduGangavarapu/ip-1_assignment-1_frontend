@@ -10,13 +10,9 @@
 .title{
     color: #009B77;
     margin-left: 1%;
-    /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
 }
 
 .button-container-1{
-    /* width: fit-content; */
     display: flex;
     flex-direction: row;
     align-items: center;

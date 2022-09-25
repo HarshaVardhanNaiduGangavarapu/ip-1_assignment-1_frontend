@@ -1,6 +1,6 @@
 import logo from './assets/icons8-connect-develop-48.svg'
 import friends from './assets/animation_500_l859okyg.gif';
-import CardView from './components/CardView';
+import CardView from './components/LoginCardView';
 import './UserScreen.css';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
