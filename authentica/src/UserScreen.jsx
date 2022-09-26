@@ -4,26 +4,19 @@ import CardView from './components/LoginCardView';
 import './UserScreen.css';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
+import { useLocation } from 'react-router-dom';
 
 function App() {
+  const { state } = useLocation();
+  const { res } = state;
+  console.log("its "+JSON.stringify(state));
+
   return (
-    // <div className="MainApp">
-    //   <header className="App-header">
-    //     <div className='App-head'>
-    //       <img src={logo} alt='No image'></img>
-    //       <h2 className="headone">Authentication App</h2> 
-    //        </div>
-    //     <img src={friends} alt="loading..." />
-    //   </header>
-    //   <div className='card'>
-    //   <CardView></CardView>
-    //   </div>
-    // </div>
     <div className="MainApp">
     <header className="App-header">
-        <NavBar></NavBar>
+        <NavBar pwd = {res['userDetail']['password']} pic = {res['userDetail']['photo']} bio = {res['userDetail']['userBio']} email = {res['userDetail']['userEmail']} name = {res['userDetail']['userName']} phone = {res['userDetail']['userMobileNo']}></NavBar>
     <div className='container-2'>
-    <Profile></Profile>
+    <Profile pic = {res['userDetail']['photo']} bio = {res['userDetail']['userBio']} email = {res['userDetail']['userEmail']} name = {res['userDetail']['userName']} phone = {res['userDetail']['userMobileNo']} ></Profile>
     </div>
     </header>
   </div>

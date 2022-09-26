@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import logo from './assets/icons8-connect-develop-48.svg'
 import friends from './assets/animation_500_l859okyg.gif';
 import CardView from './components/LoginCardView';

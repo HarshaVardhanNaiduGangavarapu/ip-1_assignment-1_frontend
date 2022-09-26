@@ -12,6 +12,14 @@
     margin-bottom: 2%;
 }
 
+::file-selector-button {
+    display: none;
+  }
+/* 
+  input[type='file'] {
+    color: rgba(0, 0, 0, 0)
+  } */
+  
 .container-items-1{
     color: #009B77;
     width: 100%;
@@ -53,7 +61,7 @@
     border-width: 0px;
     border-radius: 10px;
     height: 40%;
-    width: 100%;
+    width: 80%;
 }
 
 .container-button-2{

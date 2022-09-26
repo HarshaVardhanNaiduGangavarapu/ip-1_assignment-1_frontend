@@ -7,11 +7,25 @@ import robot from '../assets/animation_500_l8gr8bbx.gif';
 
 import '../styles/Profile.css'
 
-function Profile() {
+function Profile(props) {
+  // var binaryData = [];
+  // binaryData.push(props.pic);
+  // var imageSrc = URL.createObjectURL(new Blob(binaryData, {type: "image/jpeg"}));
+  // console.log(imageSrc)
+
+  var binary = '';
+  var base64;
+  var bytes = new Uint8Array( props.pic );
+  var len = bytes.byteLength;
+  for (var i = 0; i < len; i++) 
+    binary += String.fromCharCode( bytes[ i ] );
+    base64 = window.btoa( binary );
+    base64 = "data:image/png;base64,"+base64
+
   return (
         <div className='container-root'>
           <div className='circular--landscape'>
-              <img className='profilepic' src="https://th.bing.com/th/id/OIP.Ltqg54JFsfHety19Tpw3fAHaF7?pid=ImgDet&rs=1" />
+              <img className='profilepic' src={base64} />
           </div>
 
           <div class="line-v-1"></div>
@@ -19,19 +33,19 @@ function Profile() {
           <table className='container-items'>
             <tr>
                 <td><MdMessage className='container-img'/></td>
-                <td className='container-item'>Bio</td>
+                <td className='container-item'>{props.bio}</td>
             </tr>
             <tr>
                 <td><MdAccountCircle className='container-img'/></td>
-                <td className='container-item'>Randy</td>
+                <td className='container-item'>{props.name}</td>
             </tr>
             <tr>
                 <td><MdEmail className='container-img'/></td>
-                <td className='container-item'>orton@gmail.com</td>
+                <td className='container-item'>{props.email}</td>
             </tr>
             <tr>
                 <td><MdPhone className='container-img'/></td>
-                <td className='container-item'>12182812782</td>
+                <td className='container-item'>{props.phone}</td>
             </tr>
           </table>
 
