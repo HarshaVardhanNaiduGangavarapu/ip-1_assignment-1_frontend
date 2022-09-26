@@ -12,15 +12,20 @@ function Profile(props) {
   // binaryData.push(props.pic);
   // var imageSrc = URL.createObjectURL(new Blob(binaryData, {type: "image/jpeg"}));
   // console.log(imageSrc)
-
-  var binary = '';
-  var base64;
-  var bytes = new Uint8Array( props.pic );
-  var len = bytes.byteLength;
-  for (var i = 0; i < len; i++) 
-    binary += String.fromCharCode( bytes[ i ] );
-    base64 = window.btoa( binary );
-    base64 = "data:image/png;base64,"+base64
+  if(props.pic[0]=='h'){
+    var base64 = props.pic
+  }
+  else{
+    var binary = '';
+    var base64;
+    var bytes = new Uint8Array( props.pic );
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) 
+      binary += String.fromCharCode( bytes[ i ] );
+      base64 = window.btoa( binary );
+      base64 = "data:image/png;base64,"+base64
+  }
+  
 
   return (
         <div className='container-root'>

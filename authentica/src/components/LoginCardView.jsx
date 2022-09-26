@@ -6,6 +6,7 @@ import { MdPassword } from "react-icons/md";
 import { FaUserAlt } from 'react-icons/fa';
 import google from '../assets/icons8-google-48.svg'
 import { useState } from "react";
+import { GoogleLogin } from '@moeindana/google-oauth';
 
 
 function CardView() {
@@ -38,6 +39,19 @@ function CardView() {
     console.log('form submitted ✅');
   };
 
+  const googlelogin = (response) =>{
+    var obj = {}
+    obj['userBio'] = "NIL" 
+    obj['userEmail'] = response['email']
+    obj['userName'] = response['name']
+    obj['phone'] = response['phone']
+    obj['photo'] = response['picture'] 
+
+    var userD = {}
+    userD['userDetail'] = obj
+
+    navigate("/user",{state: { res: userD } });
+  }
 
   return (
     <div className='form'>
@@ -59,7 +73,19 @@ function CardView() {
         <input className='button' onClick={fetchData} type='submit' />
       </div>
       <p className='login'>Or login with</p>
-      <img src={google} alt="loading..." />
+      {/* <img src={google} alt="loading..." /> */}
+      <div  className="google-login">
+      
+      <GoogleLogin
+        onSuccess={response => {
+          console.log(response);
+          googlelogin(response);
+        }}
+        onError={() => {
+          console.log('Login Failed');
+        }}/>
+      </div>
+      
       <br></br>
       <div class="line-1"></div>
       <a className='register' href=''>Register</a>

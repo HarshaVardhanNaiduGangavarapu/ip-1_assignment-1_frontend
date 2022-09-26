@@ -46,6 +46,10 @@ border-color: white;
             box-sizing: border-box;
 }
 
+.google-login{
+    text-align: -webkit-center;
+}
+
 .input{
     box-sizing: border-box;
     background-color: #282c34;
