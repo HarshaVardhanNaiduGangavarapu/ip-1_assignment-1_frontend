@@ -2,7 +2,6 @@
 height: 100%;
 width: 100%;
 opacity: 1;
-/* border-radius: 5px; */
 border: 1px;
 border-color: white;
 }
@@ -45,6 +44,10 @@ border-color: white;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+}
+
+.google-login{
+    text-align: -webkit-center;
 }
 
 .input{
