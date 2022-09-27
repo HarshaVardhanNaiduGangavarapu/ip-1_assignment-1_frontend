@@ -5,6 +5,7 @@ import MainApp from './MainApp';
 import UserScreen from './UserScreen';
 import reportWebVitals from './reportWebVitals';
 import UpdateScreen from './UpdateScreen';
+import RegisterScreen from './RegisterScreen'
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,6 +18,7 @@ root.render(
     <Router>
        <Routes>
           <Route path="/" element={<MainApp />} />
+          <Route path="/register" element={<RegisterScreen />} />
           <Route path="/user" element={<UserScreen />} />
           <Route path="/update" element={<UpdateScreen />} />
       </Routes>

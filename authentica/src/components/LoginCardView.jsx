@@ -27,7 +27,7 @@ function CardView() {
     };
 
 
-  fetch("https://3c28-142-117-129-15.ngrok.io/authentication/rest/checklogin", requestOptions)
+  fetch("https://70e2-142-117-129-15.ngrok.io/authentication/rest/checklogin", requestOptions)
   .then(response => response.text())
   .then(result => {console.log(requestOptions); var obj = JSON.parse(result); if(obj['status']=='success') navigate("/user",{state: { res: obj } }); else alert('Wrong creds');})
   .catch(error => console.log('error', error));
@@ -51,6 +51,10 @@ function CardView() {
     userD['userDetail'] = obj
 
     navigate("/user",{state: { res: userD } });
+  }
+
+  const register = () =>{
+    navigate("/register");
   }
 
   return (
@@ -88,7 +92,7 @@ function CardView() {
       
       <br></br>
       <div class="line-1"></div>
-      <a className='register' href=''>Register</a>
+      <a className='register' onClick={register} href=''>Register</a>
       
     </form>
   </div>

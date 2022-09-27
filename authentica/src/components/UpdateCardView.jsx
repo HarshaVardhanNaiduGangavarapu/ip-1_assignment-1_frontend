@@ -42,7 +42,7 @@ function UpdateCardView(props) {
         redirect: 'follow'
         };
 
-        fetch("https://3c28-142-117-129-15.ngrok.io/authentication/rest/updateUserInfo", requestOptions)
+        fetch("https://70e2-142-117-129-15.ngrok.io/authentication/rest/updateUserInfo", requestOptions)
         .then(response => response.text())
         .then(result => {console.log(result); var obj = JSON.parse(result); if(obj['status']=='success') alert('Update done'); else alert('Wrong creds');})
         .catch(error => console.log('error', error));
